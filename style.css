@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.quiz-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #6c63ff;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #4e47d6;
+}
+
+.hidden {
+  display: none;
+}
+
+.option {
+  background: #f1f1f1;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.option:hover {
+  background: #dcdcdc;
+  transform: scale(1.02);
+}
+
+.correct {
+  background: #4CAF50 !important;
+  color: white;
+  animation: glow 0.5s ease-in-out;
+}
+
+.wrong {
+  background: #f44336 !important;
+  color: white;
+  animation: shake 0.3s;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 5px #4CAF50; }
+  to { box-shadow: 0 0 20px #4CAF50; }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
